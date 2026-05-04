@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(24, 24, 53);
+    text-align: center;
+    margin: 0;
+    color: rgb(219, 183, 53);
+}
+
+.inside{
+   display:flex;
+   gap: 50px;
+   flex-wrap: wrap;
+   padding: 20px;
+   justify-content: center;
+
+}
+.inside img{
+   width: 400px;
+   border-radius: 30px;
+   cursor: pointer;
+   
+
+}
+.inside img:hover{
+    transform: scale(1.1);
+    transition: 2s;
+    box-shadow:  1px 1px 20px white;
+}
+
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:rgb(0, red,0,0.5);
+   width: 100px;
+   height: 100px;
+   display: none;
+   justify-content: center;
+   align-items: center;
+
+}
