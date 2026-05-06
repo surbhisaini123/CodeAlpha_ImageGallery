@@ -30,11 +30,38 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    background:rgb(0, red,0,0.5);
-   width: 100px;
-   height: 100px;
+    background: rgb(0, 0,0,0.5);
+   width: 100%;
+   height: 100%;
    display: none;
    justify-content: center;
    align-items: center;
 
+}
+.lightbox-img{
+    width: 50%;
+    max-width: 700px;
+}
+.previous, .next{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    font-size: 40px;
+    border: none;
+    background: none;
+    color: aliceblue;
+
+}
+.previous{
+    left: 5%;
+}
+.next{
+    right: 5%;
+}
+.close{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
 }
