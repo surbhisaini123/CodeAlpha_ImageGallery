@@ -33,7 +33,7 @@ body{
     background: rgb(0, 0,0,0.5);
    width: 100%;
    height: 100%;
-   display: flex;
+   display: none;
    justify-content: center;
    align-items: center;
 
@@ -42,7 +42,7 @@ body{
     width: 50%;
     max-width: 700px;
 }
-.previous, .next{
+.Previous, .next{
     position: absolute;
     cursor: pointer;
     top: 50%;
@@ -50,19 +50,19 @@ body{
     font-size: 40px;
     border: none;
     background: none;
-    color: aliceblue;
+    color: pink;
 
 }
-.previous{
-    left: 20%;
+.Previous{
+    left: 5%;
 }
 .next{
-    right: 20%;
+    right: 5%;
 }
 .close{
     position: absolute;
     top: 40px;
     right: 40px;
-    font-size: 40px;
+    font-size: 20px;
     cursor: pointer;
 }
