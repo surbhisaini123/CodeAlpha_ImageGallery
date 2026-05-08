@@ -3,7 +3,7 @@ let lightbox=document.querySelector(".lightbox")
 let lightboxImg=document.querySelector(".lightbox-img")
 let closebtn=document.querySelector(".close")
 let prevbtn=document.querySelector(".Previous")
-
+let btn=document.querySelectorAll(".buttons button")
 let nextbtn=document.querySelector(".next")
 
 let currentIndex=0
@@ -36,3 +36,21 @@ prevbtn.addEventListener("click",()=>{
      lightboxImg.src=image[currentIndex].src
 })
 
+for(let i=0;i<btn.length;i++){
+  btn[i].addEventListener("click",(e)=>{
+    
+    let category=e.target.dataset.name
+    for(let j=0;j<image.length;j++){
+        if(category=="all"){
+            image[j].style.display="block"
+        }else if(image.dataset.category==category){
+             image[j].style.display="block"
+        }else{
+             image[j].style.display="none"
+        }
+
+    }
+   
+
+   })
+}

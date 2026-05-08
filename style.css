@@ -1,3 +1,11 @@
+h2{
+    font-size: 40px;
+    
+}
+h2:hover{
+ transform: scale(1.1);
+}
+
 body{
     background-color: rgb(24, 24, 53);
     text-align: center;
@@ -14,7 +22,8 @@ body{
 
 }
 .inside img{
-   width: 400px;
+   width: 300px;
+   height: 300px;
    border-radius: 30px;
    cursor: pointer;
    
@@ -22,7 +31,7 @@ body{
 }
 .inside img:hover{
     transform: scale(1.1);
-    transition: 2s;
+    transition: 1s;
     box-shadow:  1px 1px 20px white;
 }
 
@@ -40,13 +49,14 @@ body{
 }
 .lightbox-img{
     width: 50%;
+    height: 70%;
     max-width: 700px;
+    max-height: 700px;
 }
 .Previous, .next{
     position: absolute;
     cursor: pointer;
     top: 50%;
-   
     font-size: 40px;
     border: none;
     background: none;
