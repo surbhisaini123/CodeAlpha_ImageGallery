@@ -1,18 +1,22 @@
+/* --------HEADING------- */
 h2{
     font-size: 40px;
     
 }
 h2:hover{
  transform: scale(1.1);
+ text-shadow: 1px 1px 20px white;
 }
-
+ 
+/* ------BODY----- */
 body{
-    background-color: rgb(24, 24, 53);
+    background-color:rgb(4, 4, 35);
     text-align: center;
     margin: 0;
     color: rgb(219, 183, 53);
 }
 
+/* -------INSIDE IMAGE------ */
 .inside{
    display:flex;
    gap: 50px;
@@ -32,9 +36,10 @@ body{
 .inside img:hover{
     transform: scale(1.1);
     transition: 1s;
-    box-shadow:  1px 1px 20px white;
+    box-shadow:  1px 1px 15px white;
 }
 
+/* -------LIGHT BOX IMAGE----- */
 .lightbox{
     position: fixed;
     top: 0;
@@ -75,4 +80,25 @@ body{
     right: 40px;
     font-size: 20px;
     cursor: pointer;
+}
+ /* -------FILTER BUTTON------ */
+.buttons button{
+    padding: 5px 15px;
+    margin: 10px;
+    border-radius: 11px;
+    border: none;
+    background-color: rgb(187, 209, 225);
+    color:black;
+    
+}
+.buttons button:hover{
+    background-color: #FFD700;
+    transition: 1s;
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px white;
+}
+
+/* ------MEDIA QUERY----- */
+@media(max-width:768px){
+  .lightbox img{ width:90%; }
 }

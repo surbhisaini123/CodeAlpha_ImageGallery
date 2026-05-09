@@ -7,9 +7,10 @@ let btn=document.querySelectorAll(".buttons button")
 let nextbtn=document.querySelector(".next")
 
 let currentIndex=0
+
+// <<<<<<<<-------LIGHT BOX IMAGE-------->>>>>>>>
 for(let i=0;i<image.length;i++){
-    image[i].onclick=function () {
-        console.log("hiii big img is open");
+    image[i].onclick=function () { 
           lightbox.style.display="flex"
         lightboxImg.src=this.src
         currentIndex=i
@@ -19,32 +20,35 @@ for(let i=0;i<image.length;i++){
 
 }
 closebtn.addEventListener("click",()=>{
-    console.log("hiii btn is close");
     lightbox.style.display="none"
 
 })
 
 nextbtn.addEventListener("click",()=>{
-    console.log("hiii click next btn");
+    
     currentIndex=(currentIndex+1)%image.length
     lightboxImg.src=image[currentIndex].src
 })
 
 prevbtn.addEventListener("click",()=>{
-    console.log("hiii close btn is click");
+ 
     currentIndex=(currentIndex-1+image.length)%image.length
      lightboxImg.src=image[currentIndex].src
 })
 
+
+// <<<<<<<<<<--------APPLY FILTER---------->>>>>>>
+
 for(let i=0;i<btn.length;i++){
-  btn[i].addEventListener("click",(e)=>{
+  btn[i].addEventListener("click",()=>{
     
-    let category=e.target.dataset.name
+    let filterName=btn[i].dataset.name
     for(let j=0;j<image.length;j++){
-        if(category=="all"){
-            image[j].style.display="block"
-        }else if(image.dataset.category==category){
-             image[j].style.display="block"
+
+        if( filterName=="All"){
+            image[j].style.display=""
+        }else if( filterName==image[j].dataset.category){
+             image[j].style.display=""
         }else{
              image[j].style.display="none"
         }
